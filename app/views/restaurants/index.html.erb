@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h1>Where am I going to eat today?</h1>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <% @restaurants.each do |restaurant| %>
+      <div class="col-xs-12 col-md-4 text-center">
+        <div class="card" style="background-image: url('https://unsplash.it/1000/400?image=1');" data-sr>
+          <div class="card-shadow">
+            <div class="card-text">
+              <%= link_to restaurant_path(restaurant) do %>
+              <h5><%= restaurant.name%></h5>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
